@@ -1,5 +1,6 @@
 package io.github.trentlittle.ultimatewordsearch
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,5 +14,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        newGameButton.setOnClickListener {
+            startActivity(Intent(this,NewGameActivity::class.java))
+        }
     }
+
+
 }
+
+
